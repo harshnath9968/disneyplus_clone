@@ -56,13 +56,13 @@ const BgImage = styled.div`
   z-index: -1;
 `;
 
-const CTA = styled.div`   
-    max-width:650px;    
-    display:flex;
-    flex-direction:column;
-    width:100%;
-    ${"" /* margin-bottom:2vw; */}
-    ${"" /* flex-wrap:wrap; */}
+const CTA = styled.div`
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  ${"" /* margin-bottom:2vw; */}
+  ${"" /* flex-wrap:wrap; */}
     ${"" /* justify-content:center; */}
     ${"" /* margin-top:0; */}
     ${"" /* align-items:center; */}
@@ -71,7 +71,7 @@ const CTA = styled.div`
     ${"" /* margin-left:auto; */}
     ${"" /* transition-timing-function:ease-out; */}
     ${"" /* transition:opacity 0.2s; */}
-  `;
+`;
 
 const CTALogoOne = styled.img`
   margin-bottom: 12px;
@@ -91,7 +91,7 @@ const SignUp = styled.a`
   padding: 16.5px;
   border: 1px solid transparent;
   border-radius: 4px;
-  
+
   &:hover {
     background-color: #0483ee;
   }

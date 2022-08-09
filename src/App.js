@@ -1,17 +1,18 @@
-import { BrowserRouter} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-// import Switch from "react-switch"; 
 import React from 'react';
 import Login from "./components/Login";
 import Header from './components/Header';
+import Home from "./components/Home"
 
 function App() {
   return (
     
     <div className="App">
       <BrowserRouter>  
-        <Header />     
-            <Login />                 
+        <Header />   
+            <Login />
+            <Home />                 
       </BrowserRouter> 
     </div>
   );
