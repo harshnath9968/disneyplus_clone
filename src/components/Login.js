@@ -61,16 +61,6 @@ const CTA = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  ${"" /* margin-bottom:2vw; */}
-  ${"" /* flex-wrap:wrap; */}
-    ${"" /* justify-content:center; */}
-    ${"" /* margin-top:0; */}
-    ${"" /* align-items:center; */}
-    ${"" /* text-align:center; */}
-    ${"" /* margin-right:auto; */}
-    ${"" /* margin-left:auto; */}
-    ${"" /* transition-timing-function:ease-out; */}
-    ${"" /* transition:opacity 0.2s; */}
 `;
 
 const CTALogoOne = styled.img`
