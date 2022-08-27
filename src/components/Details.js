@@ -1,32 +1,35 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, } from "react-router-dom";
 import styled from "styled-components";
 import db from "../firebase";
-import { collection ,getDocs} from "firebase/firestore";
+import { Link } from "react-router-dom";
+import { collection, getDocs } from "firebase/firestore";
 
 
 const Detail = (props) => {
   const { id } = useParams();
   const [detailData, setDetailData] = useState({});
+  const location = useParams();
+
+
 
   useEffect(() => {
-    async function loadData(){
+    async function loadData() {
       const querySnapshot = await getDocs(collection(db, "movies")
       )
-      console.log(querySnapshot +" this is query ");
-      querySnapshot.docs.map((doc)=> {
-console.log(doc.data());
-console.log(doc.exists());
+
+      querySnapshot?.docs.map((doc) => {
 
         if (doc.exists()) {
-          setDetailData(doc.data());
+          if (doc.id === location.id)
+            setDetailData(doc.data());
         } else {
           console.log("no such document in firebase 🔥");
         }
       })
-      .catch((error) => {
-        console.log("Error getting document:", error);
-      });
+        .catch((error) => {
+          console.log("Error getting document:", error);
+        });
     }
     loadData();
   }, [id]);
